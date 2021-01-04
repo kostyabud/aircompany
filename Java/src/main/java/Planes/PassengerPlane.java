@@ -4,34 +4,21 @@ import java.util.Objects;
 
 public class PassengerPlane extends Plane{
 
-    //=================FIELDS=================
-    private int passengersCapacity;
-
-    //=================CONSTRUCTORS=================
+    private final int PASSENGERS_CAPACITY;
     public PassengerPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, int passengersCapacity) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
-        this.passengersCapacity = passengersCapacity;
+        this.PASSENGERS_CAPACITY = passengersCapacity;
     }
-
-
-    //=================METHODS=================
-    public int getPassengersCapacity() {
-        return passengersCapacity;
+    public int getPASSENGERS_CAPACITY() {
+        return PASSENGERS_CAPACITY;
     }
 
     @Override
     public String toString() {
         return super.toString().replace("}",
-                ", passengersCapacity=" + passengersCapacity +
+                ", passengersCapacity=" + PASSENGERS_CAPACITY +
                 '}');
-    }
-
-//    @Override
-//    public String toString() {
-//        return super.toString().replace("}",
-//                ", passengersCapacity=" + passengersCapacity +
-//                        '}');
-//    }
+   }
 
     @Override
     public boolean equals(Object o) {
@@ -39,11 +26,11 @@ public class PassengerPlane extends Plane{
         if (!(o instanceof PassengerPlane)) return false;
         if (!super.equals(o)) return false;
         PassengerPlane plane = (PassengerPlane) o;
-        return passengersCapacity == plane.passengersCapacity;
+        return PASSENGERS_CAPACITY == plane.PASSENGERS_CAPACITY;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), passengersCapacity);
+        return Objects.hash(super.hashCode(), PASSENGERS_CAPACITY);
     }
 }
