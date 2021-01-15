@@ -12,7 +12,7 @@ public class ExperimentalPlane extends Plane{
         this.CLASSIFICATION_LEVEL = classificationLevel;
     }
 
-    public  ClassificationLevel getCLASSIFICATION_LEVEL(){
+    public  ClassificationLevel getClassificationLevel(){
         return CLASSIFICATION_LEVEL;
     }
 

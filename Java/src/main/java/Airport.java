@@ -33,7 +33,7 @@ public class Airport {
         List<PassengerPlane> passengerPlanes = getPassengerPlanes();
         PassengerPlane planeWithMaxCapacity = passengerPlanes.get(0);
         for (PassengerPlane passengerPlane : passengerPlanes) {
-            if (passengerPlane.getPASSENGERS_CAPACITY() > planeWithMaxCapacity.getPASSENGERS_CAPACITY()) {
+            if (passengerPlane.getPassengersCapacity() > planeWithMaxCapacity.getPassengersCapacity()) {
                 planeWithMaxCapacity = passengerPlane;
             }
         }

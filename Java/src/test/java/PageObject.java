@@ -74,7 +74,7 @@ public class PageObject {
         List<ExperimentalPlane> experimentalPlanes = airport.getExperimentalPlanes();
 
         for (ExperimentalPlane experimentalPlane : experimentalPlanes) {
-            if (experimentalPlane.getCLASSIFICATION_LEVEL() == ClassificationLevel.UNCLASSIFIED) {
+            if (experimentalPlane.getClassificationLevel() == ClassificationLevel.UNCLASSIFIED) {
                 return true;
             }
         }
